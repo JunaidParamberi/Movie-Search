@@ -213,7 +213,7 @@ line-height: 24px;
 .movie-detaials-container{
   display: flex;
   flex-direction: column;
-  padding: 10px 100px;
+  padding: 10px 30px;
 }
 
 .movie-detaials-container .backdrop {
@@ -493,7 +493,7 @@ iframe:hover{
     border-radius: 9px;
   }
   .loading-container img{
-    max-width: 160px;
+    max-width: 140px;
   }
   .movie-detaials-container{
     display: flex;
