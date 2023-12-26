@@ -213,7 +213,7 @@ line-height: 24px;
 .movie-detaials-container{
   display: flex;
   flex-direction: column;
-  padding: 10px 30px;
+  padding: 10px 100px;
 }
 
 .movie-detaials-container .backdrop {
@@ -545,6 +545,10 @@ iframe{
   border: none;
   border-radius: 10px;
   transition: 0.5s;
+}
+
+.movie-detaials-container {
+  padding: 20px 30px;
 }
 
  
