@@ -35,7 +35,11 @@ const MovieCard = ({ searchInput = "" }) => {
   const displayMovies = movies.length ? movies : defaultMovie;
 
   const movieElaments = displayMovies.map((movie) => (
-    <Link to={`/${movie.id}`} className="movie-card" key={movie.id}>
+    <Link
+      to={`/Movie-Search/${movie.id}`}
+      className="movie-card"
+      key={movie.id}
+    >
       <button>
         <img src={star} alt={movie.title} /> <p>{movie.vote_average}</p>
       </button>
