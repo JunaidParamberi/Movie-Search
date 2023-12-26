@@ -18,9 +18,7 @@ body{
   align-items: center;
   justify-content: space-between;
   padding: 10px 100px;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+
 }
 
 .header-container img{
@@ -445,6 +443,26 @@ input, textarea, select{
 input, textarea {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+
+.result-not-fount h1{
+  text-align: center;
+}
+
+.result-not-fount p{
+  max-width: 100%;
+  text-align: center;
+}
+.result-not-fount {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.result-not-fount img {
+  max-width: 150px;
+
+}
+
 
 
 

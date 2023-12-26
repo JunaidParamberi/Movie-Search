@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import star from "../assets/star.svg";
 import LoadingPage from "../components/Loading";
+import notFount from "../assets/no-results.png";
 
 const TvShowCard = ({ searchInput = "" }) => {
   const [tvShow, setTvShow] = useState([]);
@@ -66,6 +67,13 @@ const TvShowCard = ({ searchInput = "" }) => {
 
   return (
     <div className="all-movie">
+      {searchedTvShow.length === 0 && searchInput.length > 5 && (
+        <div className="result-not-fount">
+          <img src={notFount} alt="" />
+          <h1>Sorry, No results found</h1>
+          <p>There are no Tv Shows matching your search terms</p>
+        </div>
+      )}
       <div className="texts">
         <h1>Tv Shows</h1>
         <h2>({tvShow.length})</h2>

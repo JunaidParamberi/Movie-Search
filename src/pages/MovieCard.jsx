@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import star from "../assets/star.svg";
 import LoadingPage from "../components/Loading";
+import notFount from "../assets/no-results.png";
 
 const MovieCard = ({ searchInput = "" }) => {
   const defaultApi =
@@ -78,20 +79,29 @@ const MovieCard = ({ searchInput = "" }) => {
   }, [searchInput, BASE_URL, API_KEY]);
 
   return (
-    <div className="all-movie">
-      <div className="texts">
-        <h1>Movies</h1>
-        <h2>({defaultMovie.length})</h2>
-      </div>
-
-      <div className="movie-card-container">
-        {loading && movies && defaultMovie ? (
-          <LoadingPage />
-        ) : (
-          <div className="card">{movieElaments}</div>
+    <>
+      <div className="all-movie">
+        {movies.length === 0 && searchInput.length > 5 && (
+          <div className="result-not-fount">
+            <img src={notFount} alt="" />
+            <h1>Sorry, No results found</h1>
+            <p>There are no movies matching your search terms</p>
+          </div>
         )}
+        <div className="texts">
+          <h1>Movies</h1>
+          <h2>({defaultMovie.length})</h2>
+        </div>
+
+        <div className="movie-card-container">
+          {loading && movies && defaultMovie ? (
+            <LoadingPage movies={movies} />
+          ) : (
+            <div className="card">{movieElaments}</div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
