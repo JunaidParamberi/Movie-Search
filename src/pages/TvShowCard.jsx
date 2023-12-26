@@ -72,7 +72,7 @@ const TvShowCard = ({ searchInput = "" }) => {
       </div>
 
       <div className="movie-card-container">
-        {loading ? (
+        {loading && tvShow && searchedTvShow ? (
           <LoadingPage />
         ) : (
           <div className="card">{tvShowElaments}</div>

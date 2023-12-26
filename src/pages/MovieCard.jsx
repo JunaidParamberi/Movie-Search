@@ -85,7 +85,7 @@ const MovieCard = ({ searchInput = "" }) => {
       </div>
 
       <div className="movie-card-container">
-        {loading ? (
+        {loading && movies && defaultMovie ? (
           <LoadingPage />
         ) : (
           <div className="card">{movieElaments}</div>
