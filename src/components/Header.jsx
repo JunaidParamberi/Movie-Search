@@ -9,13 +9,14 @@ function Header() {
 
   return (
     <div className="header-container">
-      <Link to="/">
+      <Link to="/Movie-Search/">
         <img src={Logo} alt="Movie db logo" />
       </Link>
 
       <div className="nav-link">
         <NavLink
-          to="/"
+          to="/Movie-Search/"
+          end
           style={({ isActive }) => (isActive ? activeStyle : null)}
         >
           Movies

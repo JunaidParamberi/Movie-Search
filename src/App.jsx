@@ -14,9 +14,9 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/Movie-Search/" element={<Layout />}>
           <Route
-            path="/"
+            path="/Movie-Search/"
             element={
               <Hero searchInput={searchInput} setSearchInput={setSearchInput} />
             }
@@ -41,7 +41,7 @@ function App() {
             />
           </Route>
 
-          <Route path="/:id" element={<MovieDetails />} />
+          <Route path="/Movie-Search/:id" element={<MovieDetails />} />
           <Route path="tvshow/:id" element={<TvShowDetails />} />
           <Route path="aboutus" element={<AboutUs />} />
         </Route>
