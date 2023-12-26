@@ -436,7 +436,7 @@ iframe:hover{
   gap: 30px;
 }
 
-input, textarea, select, button {
+input, textarea, select{
   font-size: 16px; /* Adjust the font size as needed */
   font-size: 1rem; /* For modern browsers */
   text-size-adjust: 100%; /* For older versions of iOS */
